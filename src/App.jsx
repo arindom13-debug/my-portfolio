@@ -357,6 +357,111 @@ function App() {
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section style={{ padding: "80px 48px", borderTop: "1px solid #1f2937" }}>
+        <p
+          style={{
+            color: "#7c3aed",
+            fontSize: "13px",
+            letterSpacing: "3px",
+            textTransform: "uppercase",
+            marginBottom: "12px",
+          }}
+        >
+          Testimonials
+        </p>
+        <h2
+          style={{
+            fontSize: "36px",
+            fontWeight: "bold",
+            marginBottom: "48px",
+            margin: "0 0 48px 0",
+          }}
+        >
+          What clients say
+        </h2>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "24px",
+            maxWidth: "1000px",
+            margin: "0 auto",
+          }}
+        >
+          {[
+            {
+              quote:
+                "Arindom delivered our landing page in 4 days. Clean, fast, and exactly what we wanted.",
+              name: "Sarah K.",
+              role: "SaaS Founder",
+            },
+            {
+              quote:
+                "Best freelancer I have worked with. Understood the brief immediately and nailed the design.",
+              name: "James T.",
+              role: "Startup CEO",
+            },
+            {
+              quote:
+                "Our website redesign increased conversions by 40%. Highly recommend Arindom.",
+              name: "Maria L.",
+              role: "E-commerce Owner",
+            },
+          ].map((t, i) => (
+            <div
+              key={i}
+              style={{
+                backgroundColor: "#0f172a",
+                border: "1px solid #1f2937",
+                borderRadius: "12px",
+                padding: "28px",
+                textAlign: "left",
+              }}
+            >
+              <p
+                style={{
+                  color: "#fbbf24",
+                  fontSize: "18px",
+                  marginBottom: "16px",
+                }}
+              >
+                ★★★★★
+              </p>
+              <p
+                style={{
+                  color: "#d1d5db",
+                  fontSize: "15px",
+                  lineHeight: "1.7",
+                  marginBottom: "20px",
+                }}
+              >
+                "{t.quote}"
+              </p>
+              <p
+                style={{
+                  color: "white",
+                  fontWeight: "600",
+                  fontSize: "14px",
+                  margin: "0",
+                }}
+              >
+                {t.name}
+              </p>
+              <p
+                style={{
+                  color: "#6b7280",
+                  fontSize: "13px",
+                  margin: "4px 0 0 0",
+                }}
+              >
+                {t.role}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* Contact */}
       <section
         id="contact"
