@@ -16,6 +16,11 @@ function App() {
           alignItems: "center",
           padding: "20px 48px",
           borderBottom: "1px solid #1f2937",
+          position: "sticky",
+          top: 0,
+          zIndex: 100,
+          backdropFilter: "blur(12px)",
+          backgroundColor: "rgba(3, 7, 18, 0.8)",
         }}
       >
         <div style={{ fontSize: "20px", fontWeight: "bold", color: "white" }}>
@@ -153,6 +158,55 @@ function App() {
         </div>
       </section>
 
+      {/* Stats */}
+      <section
+        style={{
+          padding: "40px 48px",
+          borderTop: "1px solid #1f2937",
+          borderBottom: "1px solid #1f2937",
+        }}
+      >
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
+            gap: "24px",
+            maxWidth: "800px",
+            margin: "0 auto",
+            textAlign: "center",
+          }}
+        >
+          {[
+            { number: "10+", label: "Projects Delivered" },
+            { number: "3", label: "Days Avg. Delivery" },
+            { number: "100%", label: "Client Satisfaction" },
+            { number: "$0", label: "Hidden Fees" },
+          ].map((stat, i) => (
+            <div key={i}>
+              <p
+                style={{
+                  fontSize: "36px",
+                  fontWeight: "bold",
+                  color: "#7c3aed",
+                  margin: "0 0 4px 0",
+                }}
+              >
+                {stat.number}
+              </p>
+              <p
+                style={{
+                  fontSize: "13px",
+                  color: "#6b7280",
+                  textTransform: "uppercase",
+                  letterSpacing: "1px",
+                }}
+              >
+                {stat.label}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
       {/* Services */}
       <section
         id="services"
@@ -513,13 +567,8 @@ function App() {
 
       {/* Footer */}
       <footer
-        style={{
-          borderTop: "1px solid #1f2937",
-          padding: "24px 48px",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
+        className="border-t border-gray-800 px-12 
+      py-6 flex justify-between items-center"
       >
         <p style={{ color: "#6b7280", fontSize: "14px", margin: 0 }}>
           © 2026 Arindom. All rights reserved.
