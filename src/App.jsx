@@ -8,7 +8,6 @@ function App() {
         minHeight: "100vh",
       }}
     >
-      {/* Navbar */}
       <nav
         style={{
           display: "flex",
@@ -23,8 +22,8 @@ function App() {
           backgroundColor: "rgba(3, 7, 18, 0.8)",
         }}
       >
-        <div style={{ fontSize: "20px", fontWeight: "bold", color: "white" }}>
-          Arindom.<span style={{ color: "#7c3aed" }}>.</span>
+        <div style={{ fontSize: "20px", fontWeight: "bold" }}>
+          Arindom<span style={{ color: "#7c3aed" }}>.</span>
         </div>
         <div style={{ display: "flex", gap: "32px" }}>
           <a
@@ -74,7 +73,6 @@ function App() {
         </a>
       </nav>
 
-      {/* Hero */}
       <section
         style={{
           display: "flex",
@@ -102,7 +100,6 @@ function App() {
               fontSize: "52px",
               fontWeight: "bold",
               lineHeight: "1.2",
-              marginBottom: "24px",
               margin: "0 0 24px 0",
             }}
           >
@@ -113,8 +110,8 @@ function App() {
             style={{
               fontSize: "18px",
               color: "#9ca3af",
-              marginBottom: "32px",
               lineHeight: "1.7",
+              marginBottom: "32px",
             }}
           >
             Landing pages, SaaS sites, and dashboard UIs — delivered in days,
@@ -158,7 +155,6 @@ function App() {
         </div>
       </section>
 
-      {/* Stats */}
       <section
         style={{
           padding: "40px 48px",
@@ -207,7 +203,7 @@ function App() {
           ))}
         </div>
       </section>
-      {/* Services */}
+
       <section
         id="services"
         style={{ padding: "80px 48px", borderTop: "1px solid #1f2937" }}
@@ -224,12 +220,7 @@ function App() {
           What I do
         </p>
         <h2
-          style={{
-            fontSize: "36px",
-            fontWeight: "bold",
-            marginBottom: "48px",
-            margin: "0 0 48px 0",
-          }}
+          style={{ fontSize: "36px", fontWeight: "bold", margin: "0 0 48px 0" }}
         >
           Services
         </h2>
@@ -278,7 +269,6 @@ function App() {
                 style={{
                   fontSize: "18px",
                   fontWeight: "600",
-                  marginBottom: "12px",
                   margin: "0 0 12px 0",
                 }}
               >
@@ -308,7 +298,6 @@ function App() {
         </div>
       </section>
 
-      {/* Work */}
       <section
         id="work"
         style={{ padding: "80px 48px", borderTop: "1px solid #1f2937" }}
@@ -325,12 +314,7 @@ function App() {
           Portfolio
         </p>
         <h2
-          style={{
-            fontSize: "36px",
-            fontWeight: "bold",
-            marginBottom: "48px",
-            margin: "0 0 48px 0",
-          }}
+          style={{ fontSize: "36px", fontWeight: "bold", margin: "0 0 48px 0" }}
         >
           My Work
         </h2>
@@ -348,16 +332,22 @@ function App() {
               title: "TaskFlow — SaaS Landing Page",
               tag: "SaaS",
               color: "#7c3aed",
+              image: "/taskflow.png",
+              link: "https://taskflow-swart-one.vercel.app",
             },
             {
               title: "Restaurant Website Redesign",
               tag: "Redesign",
               color: "#059669",
+              image: null,
+              link: "#",
             },
             {
               title: "Analytics Dashboard UI",
               tag: "Dashboard",
               color: "#0284c7",
+              image: null,
+              link: "#",
             },
           ].map((project, i) => (
             <div
@@ -369,19 +359,35 @@ function App() {
                 overflow: "hidden",
               }}
             >
-              <div
-                style={{
-                  height: "180px",
-                  backgroundColor: "#1e293b",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                }}
-              >
-                <span style={{ color: "#475569", fontSize: "14px" }}>
-                  Project screenshot
-                </span>
-              </div>
+              {project.image ? (
+                <a href={project.link} target="_blank" rel="noreferrer">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{
+                      width: "100%",
+                      height: "180px",
+                      objectFit: "cover",
+                      objectPosition: "top",
+                      display: "block",
+                    }}
+                  />
+                </a>
+              ) : (
+                <div
+                  style={{
+                    height: "180px",
+                    backgroundColor: "#1e293b",
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                  }}
+                >
+                  <span style={{ color: "#475569", fontSize: "14px" }}>
+                    Coming soon
+                  </span>
+                </div>
+              )}
               <div style={{ padding: "20px" }}>
                 <span
                   style={{
@@ -399,7 +405,6 @@ function App() {
                   style={{
                     fontSize: "16px",
                     fontWeight: "600",
-                    marginTop: "10px",
                     margin: "10px 0 0 0",
                   }}
                 >
@@ -411,7 +416,6 @@ function App() {
         </div>
       </section>
 
-      {/* Testimonials */}
       <section style={{ padding: "80px 48px", borderTop: "1px solid #1f2937" }}>
         <p
           style={{
@@ -425,12 +429,7 @@ function App() {
           Testimonials
         </p>
         <h2
-          style={{
-            fontSize: "36px",
-            fontWeight: "bold",
-            marginBottom: "48px",
-            margin: "0 0 48px 0",
-          }}
+          style={{ fontSize: "36px", fontWeight: "bold", margin: "0 0 48px 0" }}
         >
           What clients say
         </h2>
@@ -516,7 +515,6 @@ function App() {
         </div>
       </section>
 
-      {/* Contact */}
       <section
         id="contact"
         style={{
@@ -537,12 +535,7 @@ function App() {
           Get in touch
         </p>
         <h2
-          style={{
-            fontSize: "36px",
-            fontWeight: "bold",
-            marginBottom: "16px",
-            margin: "0 0 16px 0",
-          }}
+          style={{ fontSize: "36px", fontWeight: "bold", margin: "0 0 16px 0" }}
         >
           Let's work together
         </h2>
@@ -550,7 +543,7 @@ function App() {
           Have a project in mind? I'd love to hear about it.
         </p>
         <a
-          href="mailto:you@email.com"
+          href="mailto:alexgaminglol1111@gmail.com"
           style={{
             backgroundColor: "#7c3aed",
             color: "white",
@@ -565,10 +558,14 @@ function App() {
         </a>
       </section>
 
-      {/* Footer */}
       <footer
-        className="border-t border-gray-800 px-12 
-      py-6 flex justify-between items-center"
+        style={{
+          borderTop: "1px solid #1f2937",
+          padding: "24px 48px",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
       >
         <p style={{ color: "#6b7280", fontSize: "14px", margin: 0 }}>
           © 2026 Arindom. All rights reserved.
