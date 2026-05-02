@@ -339,8 +339,8 @@ function App() {
               title: "Restaurant Website Redesign",
               tag: "Redesign",
               color: "#059669",
-              image: null,
-              link: "#",
+              image: "/restaurant.png",
+              link: "https://restaurant-tau-rust.vercel.app",
             },
             {
               title: "Analytics Dashboard UI",
@@ -377,13 +377,20 @@ function App() {
                 <div
                   style={{
                     height: "180px",
-                    backgroundColor: "#1e293b",
+                    backgroundColor: project.color + "11",
+                    border: `1px solid ${project.color}33`,
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                   }}
                 >
-                  <span style={{ color: "#475569", fontSize: "14px" }}>
+                  <span
+                    style={{
+                      color: project.color,
+                      fontSize: "14px",
+                      fontWeight: "500",
+                    }}
+                  >
                     Coming soon
                   </span>
                 </div>
