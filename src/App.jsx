@@ -346,8 +346,8 @@ function App() {
               title: "Analytics Dashboard UI",
               tag: "Dashboard",
               color: "#0284c7",
-              image: null,
-              link: "#",
+              image: "/dashboard.png",
+              link: "https://dashboard-two-beta-77.vercel.app/",
             },
           ].map((project, i) => (
             <div
