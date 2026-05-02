@@ -349,6 +349,13 @@ function App() {
               image: "/dashboard.png",
               link: "https://dashboard-two-beta-77.vercel.app/",
             },
+            {
+              title: "Quill AI Landing Page",
+              tag: "AI Tool",
+              color: "#a855f7",
+              image: "/quill-ai.png",
+              link: "https://quill-ai-gray.vercel.app/",
+            },
           ].map((project, i) => (
             <div
               key={i}
